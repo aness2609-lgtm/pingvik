@@ -751,6 +751,20 @@ function addFromModal(){
   addToCart(mProduct.id, mColor, mSize, mWarmth, mAddon, mKit, mPrint.trim(), mStyle);
   closeProduct();
 }
+/* Розмірна сітка: s — розмір, h — зріст (см), a — вік */
+const SIZE_CHART = [
+  {s:"68",  h:"62–68",   a:"3–6 міс"},
+  {s:"74",  h:"68–74",   a:"6–9 міс"},
+  {s:"80",  h:"74–80",   a:"9–12 міс"},
+  {s:"86",  h:"80–86",   a:"12–18 міс"},
+  {s:"92",  h:"86–92",   a:"1,5–2 роки"},
+  {s:"98",  h:"92–98",   a:"2–3 роки"},
+  {s:"104", h:"98–104",  a:"3–4 роки"},
+  {s:"110", h:"104–110", a:"4–5 років"},
+  {s:"116", h:"110–116", a:"5–6 років"},
+  {s:"122", h:"116–122", a:"6–7 років"},
+];
+
 function renderModal(){
   const p=mProduct; if(!p) return;
   const imgs=colorImgs(p,mColor);
